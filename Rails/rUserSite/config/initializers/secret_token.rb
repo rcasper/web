@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RUserSite::Application.config.secret_key_base = '2fdf41700f362c355b822fc27db727e65d80260fa015f15260dc4baa3ab2c2e99240eada1bc08238e5269086582521259a4d32d8876bc55dd9c99d332f268187'
+RUserSite::Application.config.secret_key_base = '81549f26d49191ccd819ab09270672956030d1be1e158dda9e2f3b9a0ac181d5dcb09be64ef12b2ade95d6da670e89d27b323c01f0700d5a97ae6b5223c02a7a'

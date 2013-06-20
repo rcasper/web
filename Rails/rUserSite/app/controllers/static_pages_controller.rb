@@ -8,12 +8,6 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def reserve
-  end
-
-  def signup
-  end
-
   def menu
   end
 end
