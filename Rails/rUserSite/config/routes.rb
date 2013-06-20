@@ -1,10 +1,10 @@
 RUserSite::Application.routes.draw do
-  get "reservations/new"
   resources :subscribers
+  resources :reservations
   root to: 'static_pages#home'
   match '/signup',  to: 'subscribers#new',            via: 'get'
   match '/menu',    to: 'static_pages#menu',    via: 'get'
-  match '/reserve', to: 'static_pages#reserve', via: 'get'
+  match '/reserve', to: 'reservations#new', via: 'get'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 

@@ -1,0 +1,23 @@
+<% provide(:title, 'Reserve A Table') %>
+<h1>Make Your Reservation</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@reservation) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :phone %>
+      <%= f.text_field :phone %>
+
+      <%= f.label :people %>
+      <%= f.text_field :people %>
+
+      <%= f.label :time %>
+      <%= f.datetime_select :time, :ampm => true, :minute_step => 30 %>
+
+      <%= f.submit "Make My Reservation", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130618194432) do
+ActiveRecord::Schema.define(version: 20130620170401) do
+
+  create_table "reservations", force: true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.datetime "time"
+    t.string   "people"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "subscribers", force: true do |t|
     t.string   "name"
