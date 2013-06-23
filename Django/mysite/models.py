@@ -9,38 +9,28 @@
 
 from django.db import models
 
-class Microposts(models.Model):
+class Reservations(models.Model):
     id = models.IntegerField(primary_key=True)
-    content = models.CharField(max_length=765, blank=True)
-    user_id = models.IntegerField(null=True, blank=True)
+    name = models.CharField(max_length=765, blank=True)
+    phone = models.CharField(max_length=765, blank=True)
+    time = models.DateTimeField(null=True, blank=True)
+    people = models.CharField(max_length=765, blank=True)
     created_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
     class Meta:
-        db_table = u'microposts'
-
-class Relationships(models.Model):
-    id = models.IntegerField(primary_key=True)
-    follower_id = models.IntegerField(null=True, blank=True)
-    followed_id = models.IntegerField(null=True, blank=True)
-    created_at = models.DateTimeField(null=True, blank=True)
-    updated_at = models.DateTimeField(null=True, blank=True)
-    class Meta:
-        db_table = u'relationships'
+        db_table = u'reservations'
 
 class SchemaMigrations(models.Model):
     version = models.CharField(unique=True, max_length=765)
     class Meta:
         db_table = u'schema_migrations'
 
-class Users(models.Model):
+class Subscribers(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=765, blank=True)
     email = models.CharField(unique=True, max_length=765, blank=True)
     created_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
-    password_digest = models.CharField(max_length=765, blank=True)
-    remember_token = models.CharField(max_length=765, blank=True)
-    admin = models.IntegerField(null=True, blank=True)
     class Meta:
-        db_table = u'users'
+        db_table = u'subscribers'
 

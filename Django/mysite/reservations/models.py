@@ -9,12 +9,16 @@
 
 from django.db import models
 
-class Micropost(models.Model):
+class Reservation(models.Model):
     id = models.IntegerField(primary_key=True)
-    content = models.CharField(max_length=765, blank=True)
-    user_id = models.IntegerField(null=True, blank=True)
+    name = models.CharField(max_length=765, blank=True)
+    phone = models.CharField(max_length=765, blank=True)
+    time = models.DateTimeField(null=True, blank=True)
+    people = models.CharField(max_length=765, blank=True)
     created_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
     class Meta:
-        db_table = u'microposts'
-
+        db_table = u'reservations'
+    
+    def __unicode__(self):
+        return self.name

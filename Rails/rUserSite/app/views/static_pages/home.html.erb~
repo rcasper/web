@@ -1,13 +1,9 @@
  <div class="center hero-unit">
-    <h1>Welcome to RyMe's Diner</h1>
+    <h1>Welcome to RyMe's Organic Diner</h1>
 
     <h2>
-      Serving the finest organic cuisine since 2020!
+      Where all are welcome!
     </h2>
-
-    <h3>
-      Located at:<br>207 Patrick Street<br>Frederick, MD 21701
-    </h3>
 
     <%= link_to "Check out our menu!", menu_path, 
                                 class: "btn btn-large btn-primary" %>
@@ -17,5 +13,5 @@
 	nter not supported!</iframe>
   </div>
 
-  <%= link_to image_tag("RyMes.png", alt: "RyMe's"), 'http://rubyonrails.org/' %>
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 

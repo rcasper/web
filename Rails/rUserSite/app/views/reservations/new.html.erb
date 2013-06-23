@@ -1,6 +1,6 @@
 <% provide(:title, 'Reserve A Table') %>
 <h1>Make Your Reservation</h1>
-
+<small>Parties of larger than 10 are asked to make their reservation by phone</small>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@reservation) do |f| %>
@@ -13,10 +13,10 @@
 
       <%= f.label :people %>
       <%= f.text_field :people %>
-
-      <%= f.label :time %>
+<div class="field">
+      <%= f.label :date %>
       <%= f.datetime_select :time, :ampm => true, :minute_step => 30 %>
-
+</div>
       <%= f.submit "Make My Reservation", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>

@@ -8,13 +8,14 @@
 # into your database.
 
 from django.db import models
-
-class Relationships(models.Model):
+class Subscriber(models.Model):
     id = models.IntegerField(primary_key=True)
-    follower_id = models.IntegerField(null=True, blank=True)
-    followed_id = models.IntegerField(null=True, blank=True)
+    name = models.CharField(max_length=765, blank=True)
+    email = models.CharField(unique=True, max_length=255, blank=True)
     created_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(null=True, blank=True)
     class Meta:
-        db_table = u'relationships'
-
+        db_table = u'subscribers'
+    
+    def __unicode__(self):
+        return self.name
